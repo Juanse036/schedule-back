@@ -7,9 +7,9 @@ Esta Aplicación
  - Funciona leyendo y actualizando una base de datos en [MongoDB](https://www.mongodb.com/) (Preguntar por credenciales) 
 
 
-## Configuracion
+## Configuración
 
-##### Configuracion Local
+##### Configuración Local
 
  - Se deben tener encuenta la variables de entorno que se encuentran en config/db.js y config/index.js
  - En la ruta Postman Collection se encuentran los request de la API
@@ -26,7 +26,7 @@ npm run dev
 
 ```
 
-### Tecnologias Usadas
+### Tecnologías Usadas
 
  - NodeJS: Versión 14.15.1
  
