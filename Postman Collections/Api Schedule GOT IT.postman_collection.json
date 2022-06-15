@@ -1,0 +1,759 @@
+{
+	"info": {
+		"_postman_id": "070a9a45-73a4-4424-9942-14dad3de9713",
+		"name": "Api Schedule GOT IT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19411276"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :            \"Kerya\",\r\n    \"lastname\" :        \"De Gracia\",\r\n    \"userName\" :         \"kdegracia\",\r\n    \"email\" :         \"kdegracia@medcom.com.pa\",\r\n    \"password\" :        \"kdegr4c14*\",\r\n    \"repeatpassword\":   \"kdegr4c14*\",\r\n    \"role\" : \"\",\r\n    \"company\" : \"Medcom\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/users/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"users",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\" :           \"juanse\",\r\n    \"password\" :        \"ju4ns3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3977/SCHEDULE/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"SCHEDULE",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYwZjllMTk0MDlmMWRhNGVmNDZhNDVmNiIsImNyZWF0ZVRva2VuIjoxNjI2OTg5NDU2LCJleHAiOjE2MjcwNzU4NTZ9.-H76iRhNTM_zANlPFW4l27qO6JuZOp4kJDXtsFGpFxM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isGod\" : true\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/users/update/60f9e12291e8552008077936",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"users",
+								"update",
+								"60f9e12291e8552008077936"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYwZjllMTIyOTFlODU1MjAwODA3NzkzNiIsImlzQWRtaW4iOnRydWUsImNyZWF0ZVRva2VuIjoxNjI2OTkxNDMyLCJleHAiOjE2MjcwNzc4MzJ9.1-MPBZ3_QTsWIp8B5jK1zeU3wppBnAt5P5byl3JNb98",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/users/delete/60f9e19409f1da4ef46a45f6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"users",
+								"delete",
+								"60f9e19409f1da4ef46a45f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://schedule-got-it.herokuapp.com/schedule/v1/users/auth",
+							"protocol": "https",
+							"host": [
+								"schedule-got-it",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedule",
+								"v1",
+								"users",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Actualizar Tarea",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMDMyM2NhYjExMzhlNGMwOGM4ZDk5MyIsIm5hbWUiOiJGYWtlIERhbmllbCIsImlzQWRtaW4iOmZhbHNlLCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJkYXNzZXJyYW5vQGdtYWlsLmNvbSIsImNlbGxwaG9uZSI6IjQ1NjQ2NDY0IiwiY29tcGFueSI6ImdvdC1pdCIsImNyZWF0ZVRva2VuIjoxNjI5NzI4MzEwLCJleHAiOjE2Mjk4MTQ3MTB9.57AP8_OR-hZfkMiUlB8cGaS8PxlnmDZcxd-x_FLn6aE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"description\" : \"EDITANDO\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/tasks/update/61201f1a6b1873287869a7c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"tasks",
+								"update",
+								"61201f1a6b1873287869a7c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Tarea con Horas",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMTQxNmMzODBjNWRiNWFjNDJlZTlhOSIsIm5hbWUiOiJGYWtlIE1lZGNvbSIsImlzQWRtaW4iOmZhbHNlLCJyb2xlIjoiIiwiZW1haWwiOiJtZWRjb210ZXN0QGNvcnJlby5jb20iLCJjZWxscGhvbmUiOm51bGwsImNvbXBhbnkiOiJNZWRjb20iLCJjcmVhdGVUb2tlbiI6MTYyOTIxMjIxNiwiZXhwIjoxNjI5Mjk4NjE2fQ.w1fXjFKqInx-QoYeBdBLaiJVOFzIcH3bY27Y6qYdOPU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :       \"Tarea ya actualizada con tiempo\",\r\n    \"succes\": true,\r\n    \"time\":  20,\r\n    \"timeWeight\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/tasks/set-time/61002fd554c840553ccd8ef7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"tasks",
+								"set-time",
+								"61002fd554c840553ccd8ef7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Tarea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://schedule-got-it.herokuapp.com/schedule/v1/tasks/61faeb8b66941b5674d90d7a",
+							"protocol": "https",
+							"host": [
+								"schedule-got-it",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"schedule",
+								"v1",
+								"tasks",
+								"61faeb8b66941b5674d90d7a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Varias Tareas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/tasks?offset=10&slice=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "slice",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Proyects",
+			"item": [
+				{
+					"name": "Crear Proyecto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMmQzMWM2YzJjOGE2MDAxNmViNmIzOSIsIm5hbWUiOiJKdWFuIFNlYmFzdGnDoW4iLCJpc0FkbWluIjp0cnVlLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Imp1YW5zZUBnb3QtaXQudHYiLCJjZWxscGhvbmUiOm51bGwsImNvbXBhbnkiOiJHb3QgSXQiLCJjcmVhdGVUb2tlbiI6MTY0MzgyOTc3OSwiZXhwIjoxNjQzOTE2MTc5fQ.lOaWHKyScXBC8ZJWRZZkJkb2MAARx5aQen1fvNIZCPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Prueba#32\",\r\n    \"hoursTotal\" : 22,\r\n    \"time\":  {\"hours\": 10 },\r\n    \"company\" : \"Got It\",\r\n    \"companyRef\" : \"Got-It\",\r\n    \"type\" : \"Soporte\",\r\n    \"months\" : 2,    \r\n    \"time\": {\r\n        \"minutes\": 400,\r\n        \"minutesUsed\":0\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Proyecto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYwZjllMTIyOTFlODU1MjAwODA3NzkzNiIsImlzQWRtaW4iOnRydWUsImNyZWF0ZVRva2VuIjoxNjI3MzIxNzYyLCJleHAiOjE2Mjc0MDgxNjJ9.B0H_yz5Vgu2enkYWuXUNQ723oxKKa4knuvQMIJAfxMg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :            \"Proyecto de Pruebas actualizado JJ\",\r\n    \"hoursTotal\" :        5\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects/update/61002f3b204ce54fc848da39",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects",
+								"update",
+								"61002f3b204ce54fc848da39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Tareas del proyecto",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects/610038fa9c6fd61e20a901e2/tasks?offset=10&slice=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects",
+								"610038fa9c6fd61e20a901e2",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "10"
+								},
+								{
+									"key": "slice",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Proyectos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects?company=Daniel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "Daniel"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Proyeco por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects/610038fa9c6fd61e20a901e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects",
+								"610038fa9c6fd61e20a901e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Proyectos por Comañia",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/projects?company=Medcom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "company",
+									"value": "Medcom"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Requirements",
+			"item": [
+				{
+					"name": "Crear Requerimiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMmQzMWM2YzJjOGE2MDAxNmViNmIzOSIsIm5hbWUiOiJKdWFuIFNlYmFzdGnDoW4iLCJpc0FkbWluIjp0cnVlLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6Imp1YW5zZUBnb3QtaXQudHYiLCJjZWxscGhvbmUiOm51bGwsImNvbXBhbnkiOiJHb3QgSXQiLCJjcmVhdGVUb2tlbiI6MTY0MzgyOTc3OSwiZXhwIjoxNjQzOTE2MTc5fQ.lOaWHKyScXBC8ZJWRZZkJkb2MAARx5aQen1fvNIZCPA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" :           \"Capacitación 12 \",\r\n    \"project\" :        \"61faeb4866941b5674d90d77\",\r\n    \"requirement\": \"Capacitación # 12 \",\r\n    \"contact\" : {\r\n        \"name\" : \"Daniel\",\r\n        \"email\" : \"das@g.test\",\r\n        \"cellphone\" : \"3215453\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/schedule/v1/requirements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"schedule",
+								"v1",
+								"requirements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar requerimiento",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMDMyMTY0YjExMzhlNGMwOGM4ZDk4YyIsIm5hbWUiOiJGYWtlIE1lZGNvbSIsImlzQWRtaW4iOmZhbHNlLCJyb2xlIjoiIiwiZW1haWwiOiJtZWRjb21AZ21haWwuY29tIiwiY2VsbHBob25lIjoiMzEzNTQ2ODQzNTEiLCJjb21wYW55IjoiRmFrZSBNZWRjb20iLCJjcmVhdGVUb2tlbiI6MTYyODYyOTM0OCwiZXhwIjoxNjI4NzE1NzQ4fQ.Zr0Z_bN9f8jtKa5hewJl9n2dsGBd-jfqaCUTSsHSi-Q\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"requirement\": \"Edicion postman\",\r\n    \"contact\" : {\r\n        \"name\" : \"nombre\",\r\n        \"email\" : \"nombre\", \r\n        \"cellphone\" : \"nombre\" \r\n    },\r\n    \"name\" : \"Desde Postman\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3977/requirements/set-time/61129af646bf562f042ab7e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3977",
+							"path": [
+								"requirements",
+								"set-time",
+								"61129af646bf562f042ab7e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enviar como Tarea",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYxMDMyM2NhYjExMzhlNGMwOGM4ZDk5MyIsIm5hbWUiOiJGYWtlIERhbmllbCIsImlzQWRtaW4iOmZhbHNlLCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJkYXNzZXJyYW5vQGdtYWlsLmNvbSIsImNlbGxwaG9uZSI6IjQ1NjQ2NDY0IiwiY29tcGFueSI6ImdvdC1pdCIsImNyZWF0ZVRva2VuIjoxNjMwNjg5MzMyLCJleHAiOjE2MzA3NzU3MzJ9.C-Z7bMiyhCaiW8QTeII4HjWT4s-6lzM8s3x_qsEaDbk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"finished\" : false,\r\n    \"success\": false,\r\n    \"sessions\":  [{\r\n        \"value\" : 20,\r\n        \"valueWeight\" : 1,\r\n        \"startTime\": \"2021-09-03T17:05:47.518+00:00\",\r\n        \"finishTime\": \"2021-09-03T17:25:47.518+00:00\",\r\n        \"description\": \"...\"\r\n    }]\r\n}"
+						},
+						"url": {
+							"raw": "http://https:/schedule-got-it.herokuapp.com/schedule/v1/requirements/set-time/6132212feb44cf0016ae53e2",
+							"protocol": "http",
+							"host": [
+								"https"
+							],
+							"port": "",
+							"path": [
+								"schedule-got-it.herokuapp.com",
+								"schedule",
+								"v1",
+								"requirements",
+								"set-time",
+								"6132212feb44cf0016ae53e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
